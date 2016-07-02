@@ -57,14 +57,21 @@ public class Crossover {
 	}	
 
 	public static String verify(String line, boolean test1bool, boolean test2bool, boolean test4bool) {
+		System.out.println("test1bool before:");
+		System.out.println(test1bool);
+		System.out.println("test2bool before:");
+		System.out.println(test2bool);
+		System.out.println("test4bool before:");
+		System.out.println(test4bool);
 		
-		if (test1bool = false){
+		if (test1bool == false){
+			System.out.println("passou aqui !!!");
 			return line + " is not set in GDP at market prices graph.";
-		} else if (test2bool = false){
+		} else if (test2bool == false){
 			return line + " is not set in Population, total graph.";
-		} else if (test4bool = false){
-			return line + "is not set in CO2 emissions graph.";
-		} else if ((test1bool = true) && (test2bool = true) && (test4bool = true)){			
+		} else if (test4bool == false){
+			return line + " is not set in CO2 emissions graph.";
+		} else if ((test1bool == true) && (test2bool == true) && (test4bool == true)){			
 		    return line + " is present in three graphs.";
 		} 				
 		return line;

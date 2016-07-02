@@ -23,7 +23,7 @@ public class Crossover {
 		link.click();
 		Thread.sleep(2000);
 		
-		try (BufferedReader br = new BufferedReader(new FileReader("src/crossover/countries_simple_test.txt")))
+		try (BufferedReader br = new BufferedReader(new FileReader("src/crossover/countries.txt")))
 		{
 		   String line;
 		   int i =1;
@@ -57,15 +57,8 @@ public class Crossover {
 	}	
 
 	public static String verify(String line, boolean test1bool, boolean test2bool, boolean test4bool) {
-		System.out.println("test1bool before:");
-		System.out.println(test1bool);
-		System.out.println("test2bool before:");
-		System.out.println(test2bool);
-		System.out.println("test4bool before:");
-		System.out.println(test4bool);
 		
-		if (test1bool == false){
-			System.out.println("passou aqui !!!");
+		if (test1bool == false){			
 			return line + " is not set in GDP at market prices graph.";
 		} else if (test2bool == false){
 			return line + " is not set in Population, total graph.";

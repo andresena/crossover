@@ -14,21 +14,18 @@ public class CrossoverTests extends TestCase {
 	public void test2() {
       Crossover crossover = new Crossover();		  
 	  String result = crossover.verify("ARGENTINA", false, true, true);	  
-	  System.out.println(result);
 	  Assert.assertEquals("ARGENTINA is not set in GDP at market prices graph.", result);
 	}
 	
 	public void test3() {
 	  Crossover crossover = new Crossover();			  
 	  String result = crossover.verify("ALBANIA", true, false, true);	  
-	  System.out.println(result);
 	  Assert.assertEquals("ALBANIA is not set in Population, total graph.", result);
 	}
 	
 	public void test4() {
 	  Crossover crossover = new Crossover();				  
 	  String result = crossover.verify("NY", true, true, false);	  
-	  System.out.println(result);
 	  Assert.assertEquals("NY is not set in CO2 emissions graph.", result);
 	}
 }
